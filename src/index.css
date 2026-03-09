@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f8fa;
+}
+
+/* Page transition animations */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: fadeSlideIn 0.35s ease forwards;
+}
+
+/* Input focus ring */
+input:focus {
+  outline: none;
+}
+
+/* Custom radio button */
+input[type="radio"] {
+  accent-color: #6C35DE;
+}
+
+/* Scrollbar hide */
+::-webkit-scrollbar {
+  width: 0px;
+}
